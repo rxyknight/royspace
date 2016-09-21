@@ -22,14 +22,18 @@ $(function() {
             }
             $.ajax({
                 //url: "././mail/contact_me.php",
-                url: "/thankyou",
+                url: "/contact_me_form_submission",
                 type: "POST",
-                data: {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                data: JSON.stringify({
                     name: name,
                     phone: phone,
                     email: email,
                     message: message
-                },
+                }),
                 cache: false,
                 success: function() {
                     // Enable button & show success message

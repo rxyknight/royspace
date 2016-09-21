@@ -13,20 +13,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class IndexController {
-    /**
-     * index main page
-     * @param model
-     * @return
-     */
+
     @RequestMapping("/")
-    public String index(ContactForm contactForm, Model model) {
+    public String index() {
         return "index";
     }
 
-    @ResponseBody
-    @RequestMapping(value = "/thankyou",method = RequestMethod.POST)
-    public String thankyou(){
-        System.out.println("hihihi");
-        return null;
-    }
 }

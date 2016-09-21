@@ -5,8 +5,8 @@ package com.roy.royspace.model;
  */
 public class ContactForm {
     private String name;
-    private String email;
     private String phone;
+    private String email;
     private String message;
 
     public String getName() {
